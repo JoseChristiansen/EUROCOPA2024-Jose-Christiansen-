@@ -3,16 +3,17 @@ from partido_manager import partidos, estadios
 entero_partido = 0
 cedula = 0
 
-
+#Funcion para extraer el numero de partido que eligio el usuario
 def cambiar_variable1(numero):
     global entero_partido
     entero_partido = numero
 
+#Funcion para extraer la cedula que ingreso el usuario usuario
 def cambiar_variable2(numero):
     global cedula
     cedula = numero
 
-
+#Funcion para obtener los restaurantes del estadio del partido que el usuario selecciono
 def obtener_estadio_restaurante():
     partido = next((p for p in partidos if p['number'] == entero_partido), None)
     if partido is None:
@@ -28,7 +29,7 @@ def obtener_estadio_restaurante():
 
     return restaurantes['restaurants']
 
-
+#Funcion que muestra el menu de opciones 
 def mostrar_menu():
     while True:
             print("Siendo miembro de la comunidad VIP tiene privilegios de comprar en nuestros restaurantes.")
@@ -242,4 +243,8 @@ def comprar_producto():
                 print(f"Total: ${total}")
                 print("Gracias por su compra!")
                 carrito = []
+                print("Gracias por su utilizar el sistema!")
+                print("Si quiere hacer otra compra de entradas no dudes en utilizar el programa otra vez!")
                 return
+            
+

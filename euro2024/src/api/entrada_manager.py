@@ -128,8 +128,11 @@ def eleccion_asiento():
     registrar_asientos(archivo_asientos, asientos)
     if 'restaurants' in estadio:
         precio_entrada(75)
+        mostrar_menu()
+
     else:
         precio_entrada(35)
+        eleccion_de_partido()
 
 def precio_entrada(precio):
     cliente = registrar_cliente()
@@ -148,7 +151,7 @@ def precio_entrada(precio):
                  Descuento: {descuento}%
                  IVA: {iva}
                  Total a Pagar: {precio_final}""")      
-    mostrar_menu()
+
 
 def es_numero_vampiro(cedula):
     digitos = [int(d) for d in cedula]
