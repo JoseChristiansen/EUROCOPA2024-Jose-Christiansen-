@@ -1,0 +1,6 @@
+#para instalar las dependencias escribir este codigo y agregar " pip install -r requirements.txt "
+
+requests
+pytest
+pytest-cov
+pytest-mock
